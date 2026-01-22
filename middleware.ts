@@ -1,9 +1,8 @@
-// middleware.ts
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-// Define routes that should be protected
-// In this case, we protect everything except static files and sign-in/up pages
+// Define which routes are protected
 const isProtectedRoute = createRouteMatcher([
+    '/',
     '/dashboard(.*)',
     '/api(.*)',
 ]);
